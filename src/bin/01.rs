@@ -1,9 +1,9 @@
 pub fn part_one(input: &str) -> Option<u32> {
-    let mut max_calories: u32= u32::MIN;
+    let mut max_calories: u32 = u32::MIN;
     let mut calories = u32::MIN;
     for line in input.split("\n") {
         if line.len() == usize::MIN {
-             // next elf
+            // next elf
             if calories > max_calories {
                 max_calories = calories;
             }
@@ -29,7 +29,7 @@ pub fn get_top_three(input: &str) -> Option<Vec<u32>> {
     }
 
     my_vec.sort_unstable();
-    return Some(my_vec[my_vec.len()-3..].to_vec());
+    return Some(my_vec[my_vec.len() - 3..].to_vec());
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
