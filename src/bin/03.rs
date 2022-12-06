@@ -105,32 +105,6 @@ pub fn part_two(input: &str) -> Option<u32> {
         })
         .sum();
     return Some(x);
-
-    // let a = input.split("\n").collect::<Vec<&str>>().chunks(3);
-    // println!("{:?}",a);
-    return None;
-    Some(
-        input
-            .split("\n")
-            // .collect::<Vec<char>>()
-            // .chunks(3)
-            .map(|item| {
-                let (left, right) = halve(item);
-
-                let mut left_vec = Vec::from(left);
-                let mut right_vec = Vec::from(right);
-
-                left_vec.sort_unstable();
-                right_vec.sort_unstable();
-
-                let common = find_common(left_vec, right_vec);
-
-                let the_score = score(common);
-
-                the_score as u32
-            })
-            .sum(),
-    )
 }
 
 fn main() {
